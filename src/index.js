@@ -1,3 +1,4 @@
+import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -12,11 +13,12 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="home" element={<Home />} />
-        <Route path="accomodation" element={<Accomodation />} />
-        <Route path="about" element={<About />} />
-        <Route path="*" element={<Error />} />
+        <Route path="/" element={<App />}>
+          <Route path="home" element={<Home />} />
+          <Route path="accomodation" element={<Accomodation />} />
+          <Route path="about" element={<About />} />
+          <Route path="*" element={<Error />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
