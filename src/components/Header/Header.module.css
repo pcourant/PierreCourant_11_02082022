@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 63px;
+}
+
+.logo {
+  width: 210px;
+  height: 68px;
+}
+
+.nav {
+  display: flex;
+  column-gap: 3rem;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-size: var(--font-size-m);
+}
+
+.activeLink {
+  composes: link;
+  text-decoration-line: underline;
+}

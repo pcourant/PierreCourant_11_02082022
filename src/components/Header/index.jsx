@@ -1,12 +1,29 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { ReactComponent as Logo } from '../../assets/logo.svg';
+import styles from './Header.module.css';
 
 const index = () => {
   return (
-    <header>
-      <h1>Kasa</h1>
-      <nav>
-        <NavLink to="/home">Accueil</NavLink> |{' '}
-        <NavLink to="/about">À propos</NavLink>
+    <header className={styles.container}>
+      <Logo className={styles.logo} title="logo" />
+      <nav className={styles.nav}>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? styles.activeLink : styles.link
+          }
+          to="/home"
+        >
+          Accueil
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? styles.activeLink : styles.link
+          }
+          to="/about"
+        >
+          À propos
+        </NavLink>
       </nav>
     </header>
   );

@@ -1,7 +1,9 @@
+import React from 'react';
+
 const index = () => {
   return (
     <footer>
-      <h1>Kasa</h1>
+      {/* <h1>Kasa</h1> */}
       <p>© 2020 Kasa. All rights reserved</p>
     </footer>
   );

@@ -1,4 +1,22 @@
+@import-normalize; /* bring in normalize.css styles */
+
 body,
 html {
   font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+}
+
+:root {
+  --primary-color: #ff6060;
+  --font-size-s: calc(7 / 9 * 1rem); /* 14px */
+  --font-size-m: calc(4 / 3 * 1rem); /* 24px */
+  --font-size-l: calc(2 * 1rem); /* 36px */
+  --font-size-xl: calc(2 * 4 / 3 * 1rem); /* 48px */
+}
+
+div#root {
+  max-width: 1240px;
+  width: 90%;
+  margin: auto;
+  text-align: center;
 }
