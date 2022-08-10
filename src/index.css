@@ -4,6 +4,8 @@ body,
 html {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -12,11 +14,4 @@ html {
   --font-size-m: calc(4 / 3 * 1rem); /* 24px */
   --font-size-l: calc(2 * 1rem); /* 36px */
   --font-size-xl: calc(2 * 4 / 3 * 1rem); /* 48px */
-}
-
-div#root {
-  max-width: 1240px;
-  width: 90%;
-  margin: auto;
-  text-align: center;
 }

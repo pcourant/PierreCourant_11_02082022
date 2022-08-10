@@ -1,0 +1,19 @@
+.container {
+  margin: auto;
+  text-align: center;
+
+  background-color: black;
+  padding-top: 66px;
+  padding-bottom: 29px;
+}
+
+.logo {
+  width: 122;
+  height: 40;
+  fill: white;
+  margin-bottom: 28px;
+}
+
+.copyright {
+  color: white;
+}

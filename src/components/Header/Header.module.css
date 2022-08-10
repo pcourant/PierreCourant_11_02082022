@@ -1,4 +1,9 @@
 .container {
+  max-width: 1240px;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -10,6 +15,7 @@
 .logo {
   width: 210px;
   height: 68px;
+  fill: var(--primary-color);
 }
 
 .nav {
