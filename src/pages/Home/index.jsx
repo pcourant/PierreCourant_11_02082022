@@ -1,5 +1,13 @@
+import React from 'react';
+import Banner from './Banner';
+
 const index = () => {
-  return <div>Home</div>;
+  return (
+    <>
+      <Banner />
+      <main></main>
+    </>
+  );
 };
 
 export default index;

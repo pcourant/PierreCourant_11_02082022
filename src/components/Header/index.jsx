@@ -12,7 +12,7 @@ const index = () => {
           className={({ isActive }) =>
             isActive ? styles.activeLink : styles.link
           }
-          to="/home"
+          to="/"
         >
           Accueil
         </NavLink>

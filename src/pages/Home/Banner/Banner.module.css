@@ -1,0 +1,28 @@
+.container {
+  height: 223px;
+  background: url(../../../assets/banner_home.png) center/cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 25px;
+  margin-bottom: 43px;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+
+  background-color: black;
+  opacity: 0.3;
+  mix-blend-mode: darken;
+
+  border-radius: 25px;
+}
+
+.slogan {
+  position: absolute;
+  color: white;
+  font-size: var(--font-size-xl);
+}
