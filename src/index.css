@@ -2,14 +2,22 @@
 
 body,
 html {
+  box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   margin: 0;
   padding: 0;
 }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 :root {
   --primary-color: #ff6060;
+  --light-grey: #f7f7f7;
+
   --font-size-s: calc(7 / 9 * 1rem); /* 14px */
   --font-size-m: calc(4 / 3 * 1rem); /* 24px */
   --font-size-l: calc(2 * 1rem); /* 36px */
