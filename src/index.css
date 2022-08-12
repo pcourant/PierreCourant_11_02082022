@@ -5,6 +5,7 @@ html {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
+  color: var(--primary-color);
   margin: 0;
   padding: 0;
 }
