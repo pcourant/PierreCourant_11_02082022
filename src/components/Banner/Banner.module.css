@@ -1,6 +1,6 @@
 .container {
   height: 223px;
-  background: url(../../../assets/banner_home.png) center/cover;
+  background: url(../../assets/banner_home.png) center/cover;
 
   display: flex;
   align-items: center;

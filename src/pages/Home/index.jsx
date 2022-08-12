@@ -1,11 +1,12 @@
 import React from 'react';
-import Banner from './Banner';
+import Banner from '../../components/Banner';
+import Gallery from '../../components/Gallery';
 
 const index = () => {
   return (
     <>
       <Banner />
-      <main></main>
+      <Gallery />
     </>
   );
 };

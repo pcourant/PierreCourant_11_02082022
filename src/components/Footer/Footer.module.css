@@ -1,6 +1,7 @@
 .container {
-  margin: auto;
   text-align: center;
+  margin: auto;
+  margin-top: 43px;
 
   background-color: black;
   padding-top: 66px;
