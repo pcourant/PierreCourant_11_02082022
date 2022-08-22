@@ -1,15 +1,16 @@
 import React from 'react';
+import styles from './Home.module.css';
 import Banner from '../../components/Banner';
 import Gallery from '../../components/Gallery';
-import styles from './Home.module.css';
+import bannerHome from '../../assets/banner_home.png';
 
-const index = () => {
+const Home = () => {
   return (
     <div className={styles.container}>
-      <Banner />
+      <Banner image={bannerHome} slogan="Chez vous, partout et ailleurs" />
       <Gallery />
     </div>
   );
 };
 
-export default index;
+export default Home;
