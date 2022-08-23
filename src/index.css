@@ -24,6 +24,7 @@ h3 {
   --primary-color: #ff6060;
   --light-grey: #f7f7f7;
 
+  --font-size-xs: calc(2 / 3 * 1rem); /* 12px */
   --font-size-s: calc(7 / 9 * 1rem); /* 14px */
   --font-size-m: calc(4 / 3 * 1rem); /* 24px */
   --font-size-l: calc(2 * 1rem); /* 36px */

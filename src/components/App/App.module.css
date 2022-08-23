@@ -4,3 +4,10 @@
   margin: auto;
   text-align: center;
 }
+
+/* --------------- Tablet & Mobile --------------- */
+@media (max-width: 992px) {
+  .mainWrapper {
+    width: 89.3%;
+  }
+}

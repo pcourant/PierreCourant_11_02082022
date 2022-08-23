@@ -15,18 +15,34 @@
 
 .nav {
   display: flex;
-  column-gap: 3rem;
+  column-gap: 57px;
   align-items: center;
 }
 
 .link {
   text-decoration: none;
   color: var(--primary-color);
-  font-size: 2rem;
   font-size: var(--font-size-m);
 }
 
 .activeLink {
   composes: link;
   text-decoration-line: underline;
+}
+
+/* --------------- Tablet & Mobile --------------- */
+@media (max-width: 992px) {
+  .container {
+    margin-top: 20px;
+  }
+  .logo {
+    width: 145px;
+    height: 47px;
+  }
+  .nav {
+    column-gap: 10px;
+  }
+  .link {
+    font-size: var(--font-size-xs);
+  }
 }

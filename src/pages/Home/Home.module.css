@@ -2,3 +2,11 @@
   padding-top: 63px;
   padding-bottom: 63px;
 }
+
+/* --------------- Tablet & Mobile --------------- */
+@media (max-width: 992px) {
+  .container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}

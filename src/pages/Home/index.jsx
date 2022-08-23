@@ -6,10 +6,10 @@ import bannerHome from '../../assets/banner_home.png';
 
 const Home = () => {
   return (
-    <div className={styles.container}>
+    <main className={styles.container}>
       <Banner image={bannerHome} slogan="Chez vous, partout et ailleurs" />
       <Gallery />
-    </div>
+    </main>
   );
 };
 

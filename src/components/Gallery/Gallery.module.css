@@ -1,4 +1,5 @@
 .container {
+  margin-top: 43px;
   padding: 56px 50px;
   background-color: var(--light-grey);
   border-radius: 25px;
@@ -8,4 +9,15 @@
   justify-content: space-evenly;
   column-gap: 60px;
   row-gap: 50px;
+}
+
+/* --------------- Tablet & Mobile --------------- */
+@media (max-width: 992px) {
+  .container {
+    margin-top: 22px;
+    padding: 0;
+    background-color: transparent;
+
+    row-gap: 20px;
+  }
 }
