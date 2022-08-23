@@ -18,3 +18,25 @@
 .link {
   color: var(--primary-color);
 }
+
+/* --------------- Tablet & Mobile --------------- */
+@media (max-width: 992px) {
+  .container {
+    padding-top: 195px;
+    padding-bottom: 235px;
+  }
+
+  .title {
+    margin-bottom: 11px;
+    font-size: 96px;
+  }
+
+  .text {
+    font-size: 1rem;
+    margin-bottom: 133px;
+  }
+
+  .link {
+    color: var(--font-size-s);
+  }
+}
