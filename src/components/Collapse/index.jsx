@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
+/* eslint-disable react/no-unescaped-entities */
+
 import React from 'react';
 // import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import styles from './Collapse.module.css';
 
-const Collapse = ({ size, title, text, isDropped }) => {
+const Collapse = ({ size, title, paragraphs, isDropped }) => {
   return (
     <article className={`${styles.container} ${styles[`container${size}`]}`}>
       <div className={`${styles.top} ${styles[`top${size}`]}`}>
@@ -16,7 +18,16 @@ const Collapse = ({ size, title, text, isDropped }) => {
         />
       </div>
       {isDropped && (
-        <p className={`${styles.body} ${styles[`body${size}`]}`}>{text}</p>
+        <div className={`${styles.body} ${styles[`body${size}`]}`}>
+          {paragraphs.map((p, index) => (
+            <p
+              className={`${styles.paragraph} ${styles[`paragraph${size}`]}`}
+              key={index}
+            >
+              {p}
+            </p>
+          ))}
+        </div>
       )}
     </article>
   );

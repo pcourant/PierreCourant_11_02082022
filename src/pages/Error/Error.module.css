@@ -12,11 +12,9 @@
 
 .text {
   font-size: var(--font-size-l);
-  font-weight: 500;
   margin-bottom: 182px;
 }
 
 .link {
   color: var(--primary-color);
-  font-size: 500;
 }

@@ -1,0 +1,38 @@
+.container {
+  position: relative;
+  height: 415px;
+  /* width: 100%; */
+}
+
+.picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: none;
+  border-radius: 25px;
+}
+
+.chevron {
+  position: absolute;
+  top: calc(50% - 45px);
+  color: white;
+  font-size: 91px;
+}
+
+.chevronLeft {
+  left: 23px;
+}
+.chevronRight {
+  right: 23px;
+}
+
+.counter {
+  margin: 0;
+  width: 24px;
+  position: absolute;
+  bottom: 25px;
+  left: calc(50% - 12px);
+  color: white;
+}

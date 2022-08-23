@@ -1,0 +1,71 @@
+.mainContainer {
+  padding-top: 25px;
+  padding-bottom: 63px;
+  text-align: start;
+}
+
+.headerContainer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-size-l);
+  font-weight: 500;
+  line-height: 51px;
+}
+
+.location {
+  margin: 0;
+  line-height: 26px;
+}
+
+.tagContainer {
+  margin-top: 20px;
+  display: flex;
+  column-gap: 10px;
+}
+
+.ownerRatingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  row-gap: 24px;
+}
+
+.ownerContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.ownerNameContainer {
+  margin: 0;
+  text-align: right;
+}
+.ownerName {
+  margin: 0;
+  line-height: 26px;
+}
+
+.ownerPicture {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.ownerNoPicture {
+  width: 64px;
+  height: 64px;
+  background-color: #c4c4c4;
+  border-radius: 50%;
+}
+
+.sectionContainer {
+  display: flex;
+  justify-content: space-between;
+}

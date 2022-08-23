@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  column-gap: 10px;
+}
+
+.plain {
+  fill: var(--primary-color);
+}
+.empty {
+  fill: #e3e3e3;
+}

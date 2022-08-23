@@ -1,0 +1,13 @@
+.container {
+  margin: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 115px;
+  height: 25px;
+  line-height: 25px;
+  font-size: var(--font-size-s);
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+}
