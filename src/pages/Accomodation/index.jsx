@@ -18,7 +18,9 @@ const Accomodation = () => {
       />
       <header className={styles.headerContainer}>
         <div className={styles.titleContainer}>
-          <h1 className={styles.title}>Cozy loft on the Canal Saint-Martin</h1>
+          <h1 className={styles.title}>
+            Paris center, on the romantic Canal Saint-Martin
+          </h1>
           <p className={styles.location}>Paris, Île-de-France</p>
           <div className={styles.tagContainer}>
             <Tag name="Cozy" />
