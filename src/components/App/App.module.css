@@ -1,5 +1,6 @@
 .mainWrapper {
   max-width: 1240px;
+  min-width: 300px;
   width: 90%;
   margin: auto;
   text-align: center;
