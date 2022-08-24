@@ -8,7 +8,7 @@ import Collapse from '../../components/Collapse';
 const About = () => {
   return (
     <main className={styles.container}>
-      <Banner image={bannerAbout} />
+      <Banner image={bannerAbout} large={true} />
       <Collapse
         size={75}
         title="Fiabilité"
