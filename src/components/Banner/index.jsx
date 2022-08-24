@@ -1,5 +1,6 @@
-/* eslint-disable react/prop-types */
+/* eslint-disable comma-dangle */
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './Banner.module.css';
 
 const Banner = ({ image, slogan, large }) => {
@@ -12,6 +13,18 @@ const Banner = ({ image, slogan, large }) => {
       </div>
     </header>
   );
+};
+
+Banner.propTypes = {
+  image: PropTypes.string,
+  slogan: PropTypes.string,
+  large: PropTypes.bool,
+};
+
+Banner.defaultProps = {
+  image: '',
+  slogan: '',
+  large: false,
 };
 
 export default Banner;

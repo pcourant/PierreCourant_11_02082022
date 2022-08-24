@@ -1,7 +1,7 @@
 /* eslint-disable comma-dangle */
 /* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './Carousel.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -26,6 +26,16 @@ const Carousel = ({ pictures, alts }) => {
       <p className={styles.counter}>1/4</p>
     </section>
   );
+};
+
+Carousel.propTypes = {
+  pictures: PropTypes.arrayOf(PropTypes.string),
+  alts: PropTypes.arrayOf(PropTypes.string),
+};
+
+Carousel.defaultProps = {
+  pictures: [],
+  alts: [],
 };
 
 export default Carousel;

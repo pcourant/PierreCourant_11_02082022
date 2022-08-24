@@ -1,14 +1,24 @@
+/* eslint-disable comma-dangle */
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './Thumb.module.css';
 
-const index = () => {
+const Thumb = (title) => {
   return (
     <article className={styles.container}>
       <div className={styles.gradient}>
-        <h2 className={styles.locationName}>{'Titre de la location'}</h2>
+        <h2 className={styles.locationName}>{title}</h2>
       </div>
     </article>
   );
 };
 
-export default index;
+Thumb.protoType = {
+  title: PropTypes.string,
+};
+
+Thumb.defaultProps = {
+  title: '',
+};
+
+export default Thumb;

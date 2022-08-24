@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import styles from './Header.module.css';
 
-const index = () => {
+const Header = () => {
   return (
     <header className={styles.container}>
       <Logo className={styles.logo} title="logo" />
@@ -29,4 +29,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Header;

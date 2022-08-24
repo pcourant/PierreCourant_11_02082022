@@ -5,7 +5,6 @@ import Collapse from '../../components/Collapse';
 import Rating from '../../components/Rating';
 import Tag from '../../components/Tag';
 import styles from './Accomodation.module.css';
-// import Collapse from '../../components/Collapse';
 
 const Accomodation = () => {
   return (
@@ -39,13 +38,11 @@ const Accomodation = () => {
               src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-5.jpg"
               alt=""
             />
-            {/* <div className={styles.ownerNoPicture} /> */}
           </div>
           <Rating />
         </div>
       </header>
       <section className={styles.sectionContainer}>
-        {/* Collapse = ({(size, title, paragraphs, isDropped)}) */}
         <Collapse
           size={50}
           title="Description"

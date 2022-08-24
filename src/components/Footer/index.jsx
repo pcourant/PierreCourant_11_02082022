@@ -2,7 +2,7 @@ import React from 'react';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import styles from './Footer.module.css';
 
-const index = () => {
+const Footer = () => {
   return (
     <footer className={styles.container}>
       <Logo className={styles.logo} title="logo" />
@@ -11,4 +11,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Footer;
