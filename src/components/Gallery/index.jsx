@@ -5,14 +5,14 @@ import styles from './Gallery.module.css';
 
 const Gallery = () => {
   return (
-    <main className={styles.container}>
+    <section className={styles.container}>
       <Thumb title="Titre de la location" />
       <Thumb title="Titre de la location" />
       <Thumb title="Titre de la location" />
       <Thumb title="Titre de la location" />
       <Thumb title="Titre de la location" />
       <Thumb title="Titre de la location" />
-    </main>
+    </section>
   );
 };
 
