@@ -1,5 +1,7 @@
 /* eslint-disable comma-dangle */
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
+import { AccomodationsContext } from '../../utils/context';
+import { useParams } from 'react-router-dom';
 import Carousel from '../../components/Carousel';
 import Collapse from '../../components/Collapse';
 import Rating from '../../components/Rating';
@@ -7,36 +9,85 @@ import Tag from '../../components/Tag';
 import styles from './Accomodation.module.css';
 
 const Accomodation = () => {
+  const { accomodationId } = useParams();
+  const { accomodations, setAccomodations } = useContext(AccomodationsContext);
+  // const [isDataLoading, setDataLoading] = useState(false);
+  let accomodationIndex = -1;
+  let accomodation = {
+    id: '',
+    title: '',
+    cover: '',
+    pictures: [],
+    description: '',
+    host: {
+      name: '',
+      picture: '',
+    },
+    rating: '',
+    location: '',
+    equipments: [],
+    tags: [],
+  };
+
+  if (accomodations) {
+    accomodationIndex = accomodations.findIndex(
+      (accomodation) => accomodation.id === accomodationId
+    );
+    if (accomodationIndex !== -1) {
+      accomodation = accomodations[accomodationIndex];
+    }
+  }
+
+  console.log(accomodationId);
+  console.log(accomodation);
+
+  useEffect(() => {
+    async function fetchAccomodations() {
+      // setDataLoading(true);
+      try {
+        const response = await fetch('../data/logements.json');
+        const data = await response.json();
+        setAccomodations(data);
+      } catch (err) {
+        console.log(err);
+        // setError(true);
+      } finally {
+        // setDataLoading(false);
+        accomodation = accomodations.find(
+          (accomodation) => accomodation.id === accomodationId
+        );
+        console.log(accomodations);
+      }
+    }
+
+    if (accomodationIndex === -1) fetchAccomodations();
+  }, []);
+
+  const [ownerFirstName, ownerLastName] = accomodation.host.name.split(' ');
+
   return (
     <main className={styles.mainContainer}>
-      <Carousel
-        pictures={[
-          'https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-3.jpg',
-        ]}
-        alts={['accommodation-1-3']}
-      />
+      <Carousel pictures={accomodation.pictures} alts={accomodation.pictures} />
       <header className={styles.headerContainer}>
         <div className={styles.titleContainer}>
-          <h1 className={styles.title}>
-            Paris center, on the romantic Canal Saint-Martin
-          </h1>
-          <p className={styles.location}>Paris, Île-de-France</p>
+          <h1 className={styles.title}>{accomodation.title}</h1>
+          <p className={styles.location}>{accomodation.location}</p>
           <div className={styles.tagContainer}>
-            <Tag name="Cozy" />
-            <Tag name="Canal" />
-            <Tag name="Paris 10" />
+            {accomodation.tags.map((tag, index) => (
+              <Tag key={`${tag}_${index}`} name={tag} />
+            ))}
           </div>
         </div>
         <div className={styles.ownerRatingContainer}>
           <div className={styles.ownerContainer}>
             <div className={styles.ownerNameContainer}>
-              <p className={styles.ownerName}>Alexandre</p>
-              <p className={styles.ownerName}>Dumas</p>
+              <p className={styles.ownerName}>{ownerFirstName}</p>
+              <p className={styles.ownerName}>{ownerLastName}</p>
             </div>
             <img
               className={styles.ownerPicture}
-              src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-5.jpg"
-              alt=""
+              src={accomodation.host.picture}
+              alt={`picture of ${accomodation.host.name}`}
             />
           </div>
           <Rating />
@@ -46,23 +97,14 @@ const Accomodation = () => {
         <Collapse
           size={50}
           title="Description"
-          paragraphs={[
-            "Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à 1 station de la gare de l'est (7 minutes à pied).",
-          ]}
-          isDropped={true}
+          paragraphs={[`${accomodation.description}`]}
+          isDropped={false}
         />
         <Collapse
           size={50}
           title="Équipements"
-          paragraphs={[
-            'Wi-fi',
-            'Sèche Cheveux',
-            'Machine à laver',
-            'Parking',
-            'Lit King Size',
-            'Ascenseur',
-          ]}
-          isDropped={true}
+          paragraphs={accomodation.equipments}
+          isDropped={false}
         />
       </section>
     </main>

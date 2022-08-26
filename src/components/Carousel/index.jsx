@@ -23,7 +23,7 @@ const Carousel = ({ pictures, alts }) => {
         className={`${styles.chevron} ${styles.chevronRight}`}
         icon={faChevronRight}
       />
-      <p className={styles.counter}>1/4</p>
+      <p className={styles.counter}>1/{pictures.length}</p>
     </section>
   );
 };
