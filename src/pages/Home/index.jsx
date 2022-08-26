@@ -33,7 +33,7 @@ const Home = () => {
   return (
     <main className={styles.container}>
       <Banner image={bannerHome} slogan="Chez vous, partout et ailleurs" />
-      <Gallery accomodations={accomodations} />
+      <Gallery items={accomodations} type="accomodation" />
     </main>
   );
 };

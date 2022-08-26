@@ -4,11 +4,11 @@ import React from 'react';
 import Thumb from './Thumb';
 import styles from './Gallery.module.css';
 
-const Gallery = ({ accomodations }) => {
+const Gallery = ({ items, type }) => {
   return (
     <section className={styles.container}>
-      {accomodations.map(({ id, title, cover }) => (
-        <Thumb key={id} title={title} cover={cover} />
+      {items.map(({ id, title, cover }) => (
+        <Thumb key={id} id={id} title={title} cover={cover} type={type} />
       ))}
     </section>
   );
