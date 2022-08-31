@@ -1,7 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable multiline-ternary */
-/* eslint-disable react/jsx-no-undef */
-/* eslint-disable comma-dangle */
 import React, { useContext } from 'react';
 import { AccomodationsContext } from '../../utils/context';
 import { useFetchAccomodations } from '../../utils/hooks';

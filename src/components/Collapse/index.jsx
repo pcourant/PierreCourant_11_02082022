@@ -1,6 +1,3 @@
-/* eslint-disable comma-dangle */
-/* eslint-disable react/no-unescaped-entities */
-
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

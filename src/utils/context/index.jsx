@@ -1,4 +1,3 @@
-/* eslint-disable comma-dangle */
 import React, { useState, createContext } from 'react';
 import PropTypes from 'prop-types';
 

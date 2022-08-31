@@ -1,4 +1,3 @@
-/* eslint-disable comma-dangle */
 import React from 'react';
 import styles from './About.module.css';
 import Banner from '../../components/Banner';

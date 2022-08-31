@@ -1,6 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable multiline-ternary */
-/* eslint-disable comma-dangle */
 import React, { useContext } from 'react';
 import { AccomodationsContext } from '../../utils/context';
 import { useParams } from 'react-router-dom';

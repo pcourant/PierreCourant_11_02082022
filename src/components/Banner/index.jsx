@@ -1,4 +1,3 @@
-/* eslint-disable comma-dangle */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Banner.module.css';
