@@ -4,6 +4,12 @@
   text-align: start;
 }
 
+.error {
+  margin: 30px auto;
+  text-align: center;
+  font-size: var(--font-size-m);
+}
+
 .headerContainer {
   margin-top: 30px;
   display: flex;

@@ -1,0 +1,29 @@
+.container {
+  text-align: center;
+  margin: 50px auto;
+  padding: 60px;
+  border: 20px solid var(--primary-color);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: rotate 1s infinite linear;
+  height: 0;
+  width: 0;
+}
+
+/* --------------- Tablet & Mobile --------------- */
+@media (max-width: 992px) {
+  .container {
+    padding: 30px;
+    border: 10px solid var(--primary-color);
+    border-bottom-color: transparent;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

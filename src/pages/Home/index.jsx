@@ -1,39 +1,42 @@
-import React, { useEffect, useContext } from 'react';
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable multiline-ternary */
+/* eslint-disable react/jsx-no-undef */
+/* eslint-disable comma-dangle */
+import React, { useContext } from 'react';
 import { AccomodationsContext } from '../../utils/context';
+import { useFetchAccomodations } from '../../utils/hooks';
 import styles from './Home.module.css';
 import Banner from '../../components/Banner';
 import Gallery from '../../components/Gallery';
+import Loader from '../../components/Loader';
 import bannerHome from '../../assets/banner_home.png';
 
 const Home = () => {
   const { accomodations, setAccomodations } = useContext(AccomodationsContext);
-  // const [accomodations, setAccomodations] = useState([]);
-  // const [isDataLoading, setDataLoading] = useState(false);
 
-  if (accomodations.length === 0) {
-    useEffect(() => {
-      async function fetchAccomodations() {
-        // setDataLoading(true);
-        try {
-          const response = await fetch('data/logements.json');
-          const data = await response.json();
-          setAccomodations(data);
-        } catch (err) {
-          console.log(err);
-          // setError(true);
-        } finally {
-          // setDataLoading(false);
-        }
-      }
+  const { isLoading, error } = useFetchAccomodations('data/logements.json', [
+    accomodations,
+    setAccomodations,
+  ]);
 
-      fetchAccomodations();
-    }, []);
+  if (error) {
+    return (
+      <main className={styles.container}>
+        <h1 className={styles.error}>
+          Oups il y a eu un problème. Rafraichissez la page plus tard.
+        </h1>
+      </main>
+    );
   }
 
   return (
     <main className={styles.container}>
       <Banner image={bannerHome} slogan="Chez vous, partout et ailleurs" />
-      <Gallery items={accomodations} type="accomodation" />
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <Gallery items={accomodations} type="accomodation" />
+      )}
     </main>
   );
 };

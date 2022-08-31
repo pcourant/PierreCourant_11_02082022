@@ -1,5 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable multiline-ternary */
 /* eslint-disable comma-dangle */
-import React, { useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import { AccomodationsContext } from '../../utils/context';
 import { useParams } from 'react-router-dom';
 import Carousel from '../../components/Carousel';
@@ -10,58 +12,21 @@ import styles from './Accomodation.module.css';
 
 const Accomodation = () => {
   const { accomodationId } = useParams();
-  const { accomodations, setAccomodations } = useContext(AccomodationsContext);
-  // const [isDataLoading, setDataLoading] = useState(false);
-  let accomodationIndex = -1;
-  let accomodation = {
-    id: '',
-    title: '',
-    cover: '',
-    pictures: [],
-    description: '',
-    host: {
-      name: '',
-      picture: '',
-    },
-    rating: '',
-    location: '',
-    equipments: [],
-    tags: [],
-  };
+  const { accomodations } = useContext(AccomodationsContext);
 
-  if (accomodations) {
-    accomodationIndex = accomodations.findIndex(
-      (accomodation) => accomodation.id === accomodationId
+  const accomodation = accomodations.find(
+    (accomodation) => accomodation.id === accomodationId
+  );
+
+  if (!accomodation) {
+    return (
+      <main className={styles.mainContainer}>
+        <h1 className={styles.error}>
+          Oups il y a eu un problème. Retournez sur la page d'accueil.
+        </h1>
+      </main>
     );
-    if (accomodationIndex !== -1) {
-      accomodation = accomodations[accomodationIndex];
-    }
   }
-
-  console.log(accomodationId);
-  console.log(accomodation);
-
-  useEffect(() => {
-    async function fetchAccomodations() {
-      // setDataLoading(true);
-      try {
-        const response = await fetch('../data/logements.json');
-        const data = await response.json();
-        setAccomodations(data);
-      } catch (err) {
-        console.log(err);
-        // setError(true);
-      } finally {
-        // setDataLoading(false);
-        accomodation = accomodations.find(
-          (accomodation) => accomodation.id === accomodationId
-        );
-        console.log(accomodations);
-      }
-    }
-
-    if (accomodationIndex === -1) fetchAccomodations();
-  }, []);
 
   const [ownerFirstName, ownerLastName] = accomodation.host.name.split(' ');
 
