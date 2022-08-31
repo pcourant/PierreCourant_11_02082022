@@ -98,13 +98,13 @@ const Accomodation = () => {
           size={50}
           title="Description"
           paragraphs={[`${accomodation.description}`]}
-          isDropped={false}
+          isByDefaultDropped={true}
         />
         <Collapse
           size={50}
           title="Équipements"
           paragraphs={accomodation.equipments}
-          isDropped={false}
+          isByDefaultDropped={true}
         />
       </section>
     </main>
