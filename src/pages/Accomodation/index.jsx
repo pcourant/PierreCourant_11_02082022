@@ -19,7 +19,7 @@ const Accomodation = () => {
     return (
       <main className={styles.mainContainer}>
         <h1 className={styles.error}>
-          Oups il y a eu un problème. Retournez sur la page d'accueil.
+          {"Oups il y a eu un problème. Retournez sur la page d'accueil."}
         </h1>
       </main>
     );
