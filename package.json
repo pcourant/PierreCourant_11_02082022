@@ -2,6 +2,7 @@
   "name": "kasa",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://pcourant.github.io/PierreCourant_11_02082022",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
     "@fortawesome/free-regular-svg-icons": "^6.1.2",
@@ -22,7 +23,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -44,6 +47,7 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.30.1",
+    "gh-pages": "^4.0.0",
     "prettier": "^2.7.1"
   }
 }
