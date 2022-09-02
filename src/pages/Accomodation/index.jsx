@@ -26,10 +26,13 @@ const Accomodation = () => {
   }
 
   const [ownerFirstName, ownerLastName] = accomodation.host.name.split(' ');
+  const picturesAlts = accomodation.pictures.map((accomodation) =>
+    accomodation.substring(accomodation.lastIndexOf('/') + 1)
+  );
 
   return (
     <main className={styles.mainContainer}>
-      <Carousel pictures={accomodation.pictures} alts={accomodation.pictures} />
+      <Carousel pictures={accomodation.pictures} alts={picturesAlts} />
       <header className={styles.headerContainer}>
         <div className={styles.titleContainer}>
           <h1 className={styles.title}>{accomodation.title}</h1>
