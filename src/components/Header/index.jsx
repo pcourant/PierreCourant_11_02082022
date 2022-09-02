@@ -12,7 +12,7 @@ const Header = () => {
           className={({ isActive }) =>
             isActive ? styles.activeLink : styles.link
           }
-          to="/"
+          to="/PierreCourant_11_02082022/"
         >
           Accueil
         </NavLink>
@@ -20,7 +20,7 @@ const Header = () => {
           className={({ isActive }) =>
             isActive ? styles.activeLink : styles.link
           }
-          to="/about"
+          to="/PierreCourant_11_02082022/about"
         >
           À propos
         </NavLink>

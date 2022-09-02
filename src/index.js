@@ -15,7 +15,7 @@ root.render(
     <BrowserRouter>
       <AccomodationsProvider>
         <Routes>
-          <Route path="/" element={<App />}>
+          <Route path="/PierreCourant_11_02082022/" element={<App />}>
             <Route index element={<Home />} />
             <Route
               path="accomodation/:accomodationId"
