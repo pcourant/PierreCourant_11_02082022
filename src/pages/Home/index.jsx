@@ -5,7 +5,7 @@ import styles from './Home.module.css';
 import Banner from '../../components/Banner';
 import Gallery from '../../components/Gallery';
 import Loader from '../../components/Loader';
-import bannerHome from '../../assets/banner_home.png';
+import bannerHome from '../../assets/coast.png';
 
 const Home = () => {
   const { accomodations, setAccomodations } = useContext(AccomodationsContext);
