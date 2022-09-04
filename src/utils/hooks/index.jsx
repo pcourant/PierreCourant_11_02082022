@@ -21,7 +21,7 @@ export function useFetchAccomodations(url, [accomodations, setAccomodations]) {
         setError(true);
       } finally {
         // Simulate API call delay for loader visualization
-        await sleep(2000);
+        await sleep(500);
         setLoading(false);
       }
     }

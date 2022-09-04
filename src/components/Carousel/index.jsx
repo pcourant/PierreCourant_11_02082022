@@ -37,16 +37,20 @@ const Carousel = ({ pictures, alts }) => {
         src={pictures[pictureIndex]}
         alt={alts[pictureIndex]}
       />
-      <FontAwesomeIcon
-        className={`${styles.chevron} ${styles.chevronLeft}`}
-        icon={faChevronLeft}
-        onClick={handleClickChevronLeft}
-      />
-      <FontAwesomeIcon
-        className={`${styles.chevron} ${styles.chevronRight}`}
-        icon={faChevronRight}
-        onClick={handleClickChevronRight}
-      />
+      {totalPictures > 1 && (
+        <>
+          <FontAwesomeIcon
+            className={`${styles.chevron} ${styles.chevronLeft}`}
+            icon={faChevronLeft}
+            onClick={handleClickChevronLeft}
+          />
+          <FontAwesomeIcon
+            className={`${styles.chevron} ${styles.chevronRight}`}
+            icon={faChevronRight}
+            onClick={handleClickChevronRight}
+          />
+        </>
+      )}
       <p className={styles.counter}>
         {pictureIndex + 1}/{totalPictures}
       </p>
