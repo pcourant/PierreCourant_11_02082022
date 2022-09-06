@@ -9,7 +9,7 @@ const Error = () => {
       <p className={styles.text}>
         Oups! La page que vous demandez n{"'"}existe pas.
       </p>
-      <Link className={styles.link} to="/">
+      <Link className={styles.link} to="/PierreCourant_11_02082022/">
         Retourner sur la page d’accueil
       </Link>
     </main>
