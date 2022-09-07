@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import styles from './Carousel.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -56,16 +55,6 @@ const Carousel = ({ pictures, alts }) => {
       </p>
     </section>
   );
-};
-
-Carousel.propTypes = {
-  pictures: PropTypes.arrayOf(PropTypes.string),
-  alts: PropTypes.arrayOf(PropTypes.string),
-};
-
-Carousel.defaultProps = {
-  pictures: [],
-  alts: [],
 };
 
 export default Carousel;

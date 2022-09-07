@@ -1,5 +1,4 @@
 import React, { useState, createContext } from 'react';
-import PropTypes from 'prop-types';
 
 export const AccomodationsContext = createContext();
 
@@ -11,8 +10,4 @@ export const AccomodationsProvider = ({ children }) => {
       {children}
     </AccomodationsContext.Provider>
   );
-};
-
-AccomodationsProvider.propTypes = {
-  children: PropTypes.element.isRequired,
 };

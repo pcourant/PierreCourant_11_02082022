@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import styles from './Thumb.module.css';
 
 const Thumb = ({ id, title, cover, type }) => {
@@ -17,20 +16,6 @@ const Thumb = ({ id, title, cover, type }) => {
       </article>
     </Link>
   );
-};
-
-Thumb.propTypes = {
-  id: PropTypes.string.isRequired,
-  title: PropTypes.string,
-  cover: PropTypes.string,
-  type: PropTypes.string.isRequired,
-};
-
-Thumb.defaultProps = {
-  id: 'defaultID',
-  title: 'Item title',
-  cover: '',
-  type: 'defaultType',
 };
 
 export default Thumb;

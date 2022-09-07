@@ -1,29 +1,34 @@
 import React, { useContext } from 'react';
 import { AccomodationsContext } from '../../utils/context';
+// import { useParams, useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import Carousel from '../../components/Carousel';
 import Collapse from '../../components/Collapse';
 import Rating from '../../components/Rating';
 import Tag from '../../components/Tag';
 import styles from './Accomodation.module.css';
+import Error from '../Error';
 
 const Accomodation = () => {
+  // const navigate = useNavigate();
   const { accomodationId } = useParams();
   const { accomodations } = useContext(AccomodationsContext);
+
+  if (!accomodations) {
+    // navigate('/PierreCourant_11_02082022/404');
+    return <Error />;
+  }
 
   const accomodation = accomodations.find(
     (accomodation) => accomodation.id === accomodationId
   );
 
   if (!accomodation) {
-    return (
-      <main className={styles.mainContainer}>
-        <h1 className={styles.error}>
-          {"Oups il y a eu un problème. Retournez sur la page d'accueil."}
-        </h1>
-      </main>
-    );
+    // navigate('/PierreCourant_11_02082022/404');
+    return <Error />;
   }
+
+  // useEffect();
 
   const [ownerFirstName, ownerLastName] = accomodation.host.name.split(' ');
   const picturesAlts = accomodation.pictures.map((accomodation) =>

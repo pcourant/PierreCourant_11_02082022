@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './Rating.module.css';
 import { ReactComponent as Logo } from '../../assets/starSharp.svg';
 
@@ -13,14 +12,6 @@ const Rating = ({ rating }) => {
       <Logo className={`${styles.star} ${styles.empty}`} title="rating" />
     </div>
   );
-};
-
-Rating.propTypes = {
-  rating: PropTypes.number,
-};
-
-Rating.defaultProps = {
-  rating: 0,
 };
 
 export default Rating;
